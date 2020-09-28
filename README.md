@@ -69,3 +69,46 @@ end
 1. Now can put a pry in environment.rb to run <ModelName>.all and see your seeds.
 
 Make sure your models inherit from `ActiveRecord::Base`
+
+#######notes 
+at first, considered the following 
+1. config 
+2. database 
+  adapter -= what kind of database we're using 
+3. mkdir lib - creates a library folder, which is required in the environment file 
+3.a. mkdir lib/models folder to hold our database models here 
+3.b. touch lib/models/beverage.rb --> creates a file for us to store our beverage class 
+4. rakefile - brings in our environment file 
+5. run rake -T (shows us all our commands); the 3 most imp are 
+   a. create migrations
+   b. migrate 
+   c. seed
+   * this is a great test for seeing if everything works. if it does, you can run your commands 
+6. rake db:create_migration NAME=create_beverages_table 
+6b.rake db:create_migration NAME=create_alcohols_table 
+   -- creates migration tables 
+
+  Schema - just a rep of your database 
+
+#####most imp files 
+1. database
+2. environment 
+3. rake 
+
+(1)NOTE - classes should be singular 
+
+(2)- subclasses 
+class Beverage < ActiveRecord::Base #base is "sub" to the AR module 
+(3) errors - AR errors are gen at the top. go gthere first 
+(4) symbol vs. key:value pair -- refers to notation used in AR (inc)
+(5) binding.pry - 
+
+    
+end
+
+# :: subclass 
+--------
+migrations 
+seeds/seeding
+creating relationsships 
+## these 3 concepts will be the focus for the rest of the course 
